@@ -1,0 +1,26 @@
+Bootstrap: docker
+
+From: pytorch/pytorch:1.4-cuda10.1-cudnn7-runtime
+
+%environment
+    export PATH="/opt/conda/bin:$PATH"
+
+%post
+  apt-get update
+  apt-get install -y python-dev pkg-config \
+      libavformat-dev libavcodec-dev libavdevice-dev \
+      libavutil-dev libswscale-dev libswresample-dev libavfilter-dev \
+      libsm6 libxext6 libxrender-dev
+
+  export PATH="/opt/conda/bin:$PATH"
+
+  #cv/dl libs
+
+  pip install albumentations==0.4.5
+  pip install segmentation_models_pytorch==0.1.0 
+  pip install pytorch_lightning==0.7.3
+  pip install pytorch_toolbelt --no-deps
+
+  # helpers
+  pip install pandas
+  pip install fire
