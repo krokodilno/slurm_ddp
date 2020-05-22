@@ -59,6 +59,6 @@
 
 4. 
     The way to get logs on your local machine 
-        ```bash
-        rsync -avh --info=progress2 /src /dst
-        ```
+    ```bash
+    rsync -avh --info=progress2 /src /dst
+    ```
