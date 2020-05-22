@@ -14,21 +14,21 @@
 
     example training 2 nodes X 1 gpu 
 
-        ```bash
-        #SBATCH --nodes=2
-        #SBATCH --gres=gpu:1
-        #SBATCH --ntasks-per-node=1
-        ```
+    ```bash
+    #SBATCH --nodes=2
+    #SBATCH --gres=gpu:1
+    #SBATCH --ntasks-per-node=1
+    ```
 
-        ```python
-        from pytorch_lightning import Trainer
+    ```python
+    from pytorch_lightning import Trainer
 
-        trainer = Trainer(
-            gpus=1,
-            num_nodes=2,
-            distributed_backend="ddp"
-        )
-        ```
+    trainer = Trainer(
+        gpus=1,
+        num_nodes=2,
+        distributed_backend="ddp"
+    )
+    ```
 
 3.
     Run job
