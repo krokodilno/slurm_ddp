@@ -14,13 +14,18 @@ From: pytorch/pytorch:1.4-cuda10.1-cudnn7-runtime
 
   export PATH="/opt/conda/bin:$PATH"
 
-  #cv/dl libs
+  # cv/dl libs
 
   pip install albumentations==0.4.5
   pip install segmentation_models_pytorch==0.1.0 
   pip install pytorch_lightning==0.7.3
   pip install pytorch_toolbelt --no-deps
-
+  pip install monai==0.1.0
   # helpers
   pip install pandas
   pip install fire
+
+  # ct openers
+  pip install pydicom nibabel SimpleITK
+  # pydicom addon
+  conda install gdcm -c conda-forge

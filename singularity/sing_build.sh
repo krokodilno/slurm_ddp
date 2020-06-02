@@ -1,6 +1,6 @@
 VER=1.4.0
 
-IMAGE_NAME=./pytorch_gpu_${VER}.simg
+IMAGE_NAME=./pytorch_gpu_${VER}_ct_utils.simg
 
 %post
 export PATH=/opt/conda/bin:$PATH
